@@ -1,1 +1,2 @@
 C:\Users\syake\GitHub\Kakuto24\Library\BurstCache filter=lfs diff=lfs merge=lfs -text
+*.lid filter=lfs diff=lfs merge=lfs -text
