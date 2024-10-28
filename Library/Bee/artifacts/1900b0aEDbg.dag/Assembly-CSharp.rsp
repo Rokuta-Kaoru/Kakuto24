@@ -378,6 +378,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/program/ATField.cs"
 "Assets/program/player2_demo.cs"
+"Assets/program/player2_move.cs"
 "Assets/program/player_move.cs"
 -langversion:9.0
 

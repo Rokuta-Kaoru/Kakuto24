@@ -39,6 +39,7 @@
      <Compile Include="Assets\program\ATField.cs" />
      <Compile Include="Assets\program\player2_demo.cs" />
      <Compile Include="Assets\program\player_move.cs" />
+     <Compile Include="Assets\program\player2_move.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.3.8f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

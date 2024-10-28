@@ -6,7 +6,7 @@ using UnityEngine.InputSystem; // 新しいInput Systemを使用するために�
 public class player_move : MonoBehaviour
 {
     Rigidbody2D rb;
-    float speed = 5.0f;
+    float speed = 10.0f;
     float jumpForce = 8.0f;
 
     public GameObject huttobasi;
@@ -27,7 +27,7 @@ public class player_move : MonoBehaviour
 
     void Update()
     {
-        var gamepad = Gamepad.current;
+        var gamepad = Gamepad.all[0]; // 1P用のゲームパッドを取得
         if (gamepad == null) return; // ゲームパッドが接続されていない場合は何もしない
 
         // 方向キーの横入力で左右移動
@@ -62,10 +62,10 @@ public class player_move : MonoBehaviour
         canUseWKey = false; // Wキーを一時的に無効化
 
         huttobasi.SetActive(true); // 「huttobasi」を表示
-        yield return new WaitForSeconds(0.5f); // 0.5秒待機
+        yield return new WaitForSeconds(0.2f); // 0.5秒待機
         huttobasi.SetActive(false); // 「huttobasi」を非表示
 
-        yield return new WaitForSeconds(1.0f); // クールダウン時間（1.5秒）
+        yield return new WaitForSeconds(1.0f); // クールダウン時間（1.0秒）
         canUseWKey = true; // Wキーを再度有効化
     }
 }
