@@ -1,12 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem; // 新しいInput Systemを使用するために追加
 
 public class player_move : MonoBehaviour
 {
     Rigidbody2D rb;
     float speed = 5.0f;
-    float jumpForce = 5.0f;
+    float jumpForce = 8.0f;
 
     public GameObject huttobasi;
     private bool canUseWKey = true; // Wキーの使用可否を管理
@@ -26,30 +27,22 @@ public class player_move : MonoBehaviour
 
     void Update()
     {
-        // 横移動（左右キー）
-        if (Input.GetKey(KeyCode.D))
-        {
-            rb.velocity = new Vector2(speed, rb.velocity.y);
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            rb.velocity = new Vector2(-speed, rb.velocity.y);
-        }
-        else
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
+        var gamepad = Gamepad.current;
+        if (gamepad == null) return; // ゲームパッドが接続されていない場合は何もしない
 
-        // ジャンプ（スペースキー） - ジャンプ回数が最大回数未満の場合のみジャンプ
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
+        // 方向キーの横入力で左右移動
+        float moveInput = gamepad.dpad.x.ReadValue();
+        rb.velocity = new Vector2(moveInput * speed, rb.velocity.y);
+
+        // ジャンプ（Xボタン） - ジャンプ回数が最大回数未満の場合のみジャンプ
+        if (gamepad.buttonWest.wasPressedThisFrame && jumpCount < maxJumps)
         {
-            //rb.velocity = new Vector2(rb.velocity.x, 0); // Y方向の速度をリセットしてジャンプ
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpCount++;
         }
 
-        // Wキーで「huttobasi」オブジェクトを一時表示
-        if (Input.GetKeyDown(KeyCode.W) && canUseWKey && huttobasi != null)
+        // Bボタンで「huttobasi」オブジェクトを一時表示
+        if (gamepad.buttonNorth.wasPressedThisFrame && canUseWKey && huttobasi != null)
         {
             StartCoroutine(ShowHuttobasiTemporarily());
         }

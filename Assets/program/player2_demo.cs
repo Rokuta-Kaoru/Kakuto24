@@ -27,11 +27,11 @@ public class player2_demo : MonoBehaviour
     void Update()
     {
         // 横移動（左右キー）
-        if (Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.D))
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
         }
-        else if (Input.GetKey(KeyCode.LeftArrow))
+        else if (Input.GetKey(KeyCode.A))
         {
             rb.velocity = new Vector2(-speed, rb.velocity.y);
         }
@@ -41,15 +41,15 @@ public class player2_demo : MonoBehaviour
         }
 
         // ジャンプ（スペースキー） - ジャンプ回数が最大回数未満の場合のみジャンプ
-        if (Input.GetKeyDown(KeyCode.J) && jumpCount < maxJumps)
+        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0); // Y方向の速度をリセットしてジャンプ
+            //rb.velocity = new Vector2(rb.velocity.x, 0); // Y方向の速度をリセットしてジャンプ
             rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
             jumpCount++;
         }
 
         // Wキーで「huttobasi」オブジェクトを一時表示
-        if (Input.GetKeyDown(KeyCode.UpArrow) && canUseWKey && huttobasi != null)
+        if (Input.GetKeyDown(KeyCode.W) && canUseWKey && huttobasi != null)
         {
             StartCoroutine(ShowHuttobasiTemporarily());
         }
@@ -75,4 +75,4 @@ public class player2_demo : MonoBehaviour
         yield return new WaitForSeconds(1.0f); // クールダウン時間（1.5秒）
         canUseWKey = true; // Wキーを再度有効化
     }
-}
+}　
