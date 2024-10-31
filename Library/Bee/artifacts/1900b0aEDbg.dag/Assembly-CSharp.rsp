@@ -377,9 +377,15 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/program/ATField.cs"
+"Assets/program/BackTitle.cs"
+"Assets/program/GameOverChecker.cs"
 "Assets/program/player2_demo.cs"
 "Assets/program/player2_move.cs"
 "Assets/program/player_move.cs"
+"Assets/program/SceneController.cs"
+"Assets/program/StageChange1.cs"
+"Assets/program/StageChange2.cs"
+"Assets/program/StageChange3.cs"
 -langversion:9.0
 
 /deterministic
