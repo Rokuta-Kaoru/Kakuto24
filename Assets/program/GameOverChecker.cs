@@ -11,6 +11,8 @@ public class GameOverChecker : MonoBehaviour
     public float overXmin = -13f;
     public float overYmin = -6f;
 
+    public string Scene_name = "a";
+
     public GameObject gekitui_player; // gekitui_player オブジェクトを追加
     public VideoPlayer videoPlayer; // VideoPlayer を追加
 
@@ -57,13 +59,13 @@ public class GameOverChecker : MonoBehaviour
         // 右のボーダーを超えた場合
         if (transform.position.x > overXmax)
         {
-            newPosition = new Vector3(4.42f, -0.4f, 0f);
-            rotationZ = 180f;
+            newPosition = new Vector3(3.66f, -0.97f, 0f);
+            rotationZ = 0f;
         }
         // 左のボーダーを超えた場合
         else if (transform.position.x < overXmin)
         {
-            newPosition = new Vector3(-3.88f, -0.4f, 0f);
+            newPosition = new Vector3(-3.71f, -0.97f, 0f);
             rotationZ = 180f;
         }
         // 上のボーダーを超えた場合
@@ -87,7 +89,7 @@ public class GameOverChecker : MonoBehaviour
     // ビデオが終了したら呼び出されるメソッド
     void OnVideoEnd(VideoPlayer vp)
     {
-        SceneManager.LoadScene("ResultScene");
+        SceneManager.LoadScene(Scene_name);
     }
 
     // ボーダー範囲外かを判定するメソッド

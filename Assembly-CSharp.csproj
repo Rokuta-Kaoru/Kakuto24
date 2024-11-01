@@ -37,13 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\program\player2_move.cs" />
+     <Compile Include="Assets\program\HokoraManager.cs" />
      <Compile Include="Assets\program\StageChange1.cs" />
      <Compile Include="Assets\program\ATField.cs" />
+     <Compile Include="Assets\program\systems.cs" />
      <Compile Include="Assets\program\SceneController.cs" />
+     <Compile Include="Assets\Scenes\Scenes_test\SelManagerScript.cs" />
      <Compile Include="Assets\program\GameOverChecker.cs" />
      <Compile Include="Assets\program\BackTitle.cs" />
      <Compile Include="Assets\program\StageChange2.cs" />
+     <Compile Include="Assets\program\GameManager.cs" />
+     <Compile Include="Assets\program\ready.cs" />
+     <Compile Include="Assets\program\tumi_bousi.cs" />
      <Compile Include="Assets\program\player2_demo.cs" />
+     <Compile Include="Assets\program\aiueo.cs" />
      <Compile Include="Assets\program\StageChange3.cs" />
      <Compile Include="Assets\program\player_move.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
