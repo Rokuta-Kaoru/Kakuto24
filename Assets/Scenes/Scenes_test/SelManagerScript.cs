@@ -20,9 +20,8 @@ public class SelManagerScript : MonoBehaviour
         //変数初期化
         selCnt = 0;
         animator[selCnt].SetBool("isSel", true);
-    }
-
-    private void Update()
+    }  
+ private void Update()
     {
         //ゲームパッド設定以下
         var gamepad = Gamepad.all[0]; // 1P用のゲームパッドを取得
@@ -30,7 +29,7 @@ public class SelManagerScript : MonoBehaviour
         // 方向キーの横入力で左右移動
         float moveInput = gamepad.dpad.x.ReadValue();
 
-        //float input = Input.GetAxis("Vertical");
+        //float input = Input.GetAxis("Vfrtical");
         //Debug.Log($"Input: {input}, selCnt: {selCnt}, isSel: {isSel}");
 
         // スティックの入力チェック

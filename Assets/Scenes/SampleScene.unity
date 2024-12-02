@@ -2695,19 +2695,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4547852287318361389, guid: b75cf555ef0cd314fb7bb96aaacd5c22, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4547852287318361389, guid: b75cf555ef0cd314fb7bb96aaacd5c22, type: 3}
       propertyPath: m_Color.b
-      value: 0.21960786
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4547852287318361389, guid: b75cf555ef0cd314fb7bb96aaacd5c22, type: 3}
       propertyPath: m_Color.g
-      value: 0.21960786
+      value: 0.13994718
       objectReference: {fileID: 0}
     - target: {fileID: 4547852287318361389, guid: b75cf555ef0cd314fb7bb96aaacd5c22, type: 3}
       propertyPath: m_Color.r
-      value: 0.21960786
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5564526496942627711, guid: b75cf555ef0cd314fb7bb96aaacd5c22, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3382,6 +3382,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8902259286681498268, guid: 248365b8c28c3ac42916b037d1b7978e, type: 3}
       propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8902259286681498268, guid: 248365b8c28c3ac42916b037d1b7978e, type: 3}
+      propertyPath: m_Color.b
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3530,6 +3534,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: mamimami_4
       objectReference: {fileID: 0}
+    - target: {fileID: 3636259896946393922, guid: 6c7eea302e159e142a4826d9efccb382, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c7eea302e159e142a4826d9efccb382, type: 3}
 --- !u!1001 &4848282314709740574
@@ -3542,6 +3550,10 @@ PrefabInstance:
     - target: {fileID: 4848282313406498198, guid: 38046fc9445356f42a41252c05eead6b, type: 3}
       propertyPath: m_Name
       value: kuniokun_0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4848282313406498198, guid: 38046fc9445356f42a41252c05eead6b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4848282313406498199, guid: 38046fc9445356f42a41252c05eead6b, type: 3}
       propertyPath: m_RootOrder
